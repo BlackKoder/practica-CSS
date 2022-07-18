@@ -1,0 +1,302 @@
+/*CSS es un lenguaje de hoja de estilo en cascada, este sirve para añadir lo que sería el estilo, los colores y el diseño a la pagina web
+Por lo general, CSS es un lenguaje que tiene reglas, en las que se alteran las propiedades de los selectores para poder modificar un 
+diseño.
+
+Hay distintos tipos de selectores, están los selectores universales por ejemplo *{margin:0; padding:0;} que son representados por
+el asterisco, y su objetivo es cambiar los estilos de forma global en todo el documento de la pagina, normalmente este selector se
+utiliza para resetear los estilos por defecto, ya que normalmente las paginas web, traen su propio margin y padding, lo que afecta a 
+la distribución de nuestros objetos en la pagina, así que por eso se resetea normalmente, para luego darle estilo a la pagina
+
+Hay otro tipo de selectores como lo son los selectores de etiqueta, en ellos se selecciona una etiqueta en específico y se le agrega
+un estilo p{font-size:30px;} para poder darle estilo a varios selectores de etiqueta a la vez, simplemente tenemos que poner una coma
+seguido del selector que queremos agregar y así tendremos más practicidad h1,h2,h3,h4,h5,h6{color:red;} También tenemos los selectores
+descendientes, estos se suponen que si tenemos una etiqueta descendiente de una etiqueta padre, debe de colocarse en el mismo orden
+en el CSS para que pueda ser identificado el selector y se agregen los estilos ejemplo p a{text-decoration:none;} aquí se toma nada 
+más la etiqueta a que está dentro de la etiqueta p, y así va a ser tomado como prioridad también hay otro tipo de selectores como por
+ejemplo a[href="https://www.google.com.ve"]{color:red;} aquí unicamente va a ser cambiado el selector que tenga su atributo href
+con ese valor exactamente, y así podemos hacer que tenga un estilo diferente de los demás, solo hay que encerrar el href en corchetes
+y será identificado por CSS. Una forma de poder identificar los selectores es por clase y por id. Por ejemplo le ponemos definir
+una clase o un id a una etiqueta en html para luego ser modificada específicamente el selector con esa clase o id en CSS
+en HTML debe de colocarse en la etiqueta <a class="clase" id="id"> entonces en css se debe de identificar una clase con un punto
+y un id con una almohadilla ejemplo .clase{font-size:30px;} #id{color:blue;} y así es como normalmente se trabaja con los selectores
+de CSS.
+
+Unidades de medida en CSS las unidades de medida simplemente representan, valga la redundancia su propia medida. El ancho, alto,
+tamaño de la tipografía...etc. Con esto se supone que podemos aplicarle la distribución de nuestro sitio web para adaptarlo a 
+algo mucho más visible para el usuario. Entonces tenemos dos tipos de medidas, que bien son las relativas y las absolutas
+las absolutas realmente no se utilizan mucho, porque hoy en día no se trabaja con eso. Serían bien definidas como los cm,mm y in.
+Centímetros, milimetros y las pulgadas, a su vez tenemos las unidades de medida relativa, que bien son los px, em, rem y %
+El pixel, los em, los rem y el porcentaje. Los píxeles realmente no debería de ser considerado como unidades relativas, puesto que
+es una unidad que es un poco estática y no tiene el mismo nivel de dinamismo... Esto realmente no sería muy útil a la hora de hacer
+diseños responsivos. Y honestamente, es porque es una unidad que al poner algo en concreto se mantiene fija y no se puede establecer
+otra cosa que no sea eso. En cambio en el caso de los em es mucho más distinto, ya que los em toman el valor de el primer elemento padre
+que tengan más cerca... Por ejemplo: body{font-size:20px;} div{font-size:13px;} article p{font-size:1em;}; Al ser el font-size
+de 1em representa que va a tomar el valor de el contenedor padre que tenga más cercano, es decir, que va a tomar la medida de el div
+entonces el parrafo que tenemos encerrado en la etiqueta de article, va a tomar el mismo tamaño que tiene nuestro contenedor div
+por ser el más cercano, ya que el body es el que le queda más lejos... Si no estuviera ese div ahí, entonces tomaría el valor
+de lo que sería el body. Y su tamaño siempre se va a ver afectado específicamente por esa medida, por ejemplo, si en vez de
+1em tuvieramos 2em entonces sería el doble de la medida que estamos estipulando. Es decir, que en vez de ser la medida establecida
+para nuestro párrafo 13px ahora sería el doble, 26px y si fueran 3em entonces se multiplicaría la medida por 3, y así suscesivamente
+Ahora en el caso de lo que son los rem si tuvieramos 1rem en vez de 1em este tomaría el valor de nuestro body, ya que tomaría el tamaño
+de lo que sería nuestro primer contenedor por defecto. En el caso de los porcentajes, nos sirven para que nosotros podamos hacer un diseño
+mucho más responsivo, adaptable a los dispositivos móviles y que sea mucho más compacto, Entonces. Por ejemplo: si pusieramos la propiedad
+width en un selector de un div, con un valor de un 100%, o sea div{width:100%;} este estaría ocupando lo que es el 100% del espacio
+donde estaría encerrado, es decir que si no tiene un contenedor padre que lo contenga, va a tomar todo el tamaño de la pantalla. En
+caso de que por ejemplo le pusieramos un 50% entonces abarcaría la mitad de la pantalla. Y no toda en lo absoluto
+
+Unidades de color: Así como tenemos las unidades de medida también tenemos las unidades de color, en estas pues nos sirven para agregarle
+un color distinto a algo en específico en nuestra web. Entonces, hay tres formas de agregar esas unidades de color, están por rgb,
+de forma porcentual, de forma hexadecimal y rgba. Para agregar un color se agrega un código de un color en específico, por ejemplo:
+En rgb tenemos que es la paleta de colores predeterminada de red green and blu, supongamos que tenemos un texto al que queremos cambiarle
+el color p{color:rgb(91,187,75);} de esta forma agregamos nosotros nuestro color en rgb. En hexadecimal, tenemos que es un código
+conformado de una almohadilla seguido de 6 caracteres, entonces si tuvieramos un texto p{color:#5BBB4B;} tendríamos el mismo color
+pero en su variación hexadecimal, también tenemos la opción de agregarlo bajo los porcentajes, bien sería p{color:rgb(112,60%,51%);}
+Seguido de esto tenemos la idea de que podemos agregar una unidad de medida que nos puede servir de mucho rgba, esta representa
+lo que sería red green and blue y un caracter alfa. Con el que podemos agregar una opacidad a nuestro color. En el que podemos poner una
+variación de el 0 al 1 siendo .5 el punto medio de nuestra opacidad p{color:rgba(91,187,75, .5);} Normalmente se usan este tipo de colores
+o medidas mejor dicho, para darle un diseño interesante a nuestra pagina web. Por eso predominan lo que serían las unidades hexadecimales
+y las unidades rgb, en el caso de las unidades porcentuales simplemente no se utilizan con frecuencia en el diseño. 
+Las 17 palabras (colores) que se pueden usar en CSS: aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, 
+olive, orange, purple, red, silver, teal, white, yellow 
+
+Contenedores en CSS podemos usar contenedores para hacer más visual nuestro sitio web, para eso tenemos que diferenciar qué tipo de 
+elementos son, si son de tipo línea o de tipo bloque... Las cajas o los div son elementos de tipo bloque y estos al ser de tipo
+bloque, tienden a tomar el ancho completo del contenedor padre donde están alojados y alinearse uno justo debajo del otro. En cambio
+los que son de tipo línea, se posicionan uno justo al lado del otro, y solo abarcan el ancho o espacio suficiente del elemento en si
+estos objetos pueden ser por ejemplo los enlaces, que son elementos de tipo línea. Ahora un contenedor tiene una cantidad de factores
+que lo caracterizan y son un margin, padding, width, height, border. El margin es el margen interno que vamos a tener en un elemento,
+es decir que si tú a un elemento le pones un margin va a haber un espaciado por fuera de la caja. El padding es el margen interno que
+tiene un elemento, por lo que lo que esté dentro de nuestro contenedor va  a tomar un margen y espaciado. El width juega con la anchura
+de nuestro contenedor, el height con la altura y el border simplemente le otorga un borde a nuestra caja para bien poder diferenciarla
+por ejemplo. a la hora de poner un margin:20px 30px; representado de esta forma, en dos unidades de medida lo que va a hacer es que nos
+va a tomar nuestro primera unidad como el margen que hay de arriba y abajo y la otra unidad va a representar el margen que hay de derecha
+a izquierda. De igual forma puede ser utilizado con el padding. Pero también pasa el caso de que podemos tener 4 unidades de medida
+en nuestra propiedad. Por ejemplo: padding:10px 20px 30px 40px; va a tomar cada una de las unidades de medida en forma de las manecillas
+del reloj, es decir, que primero va a ser tomado el margen de arriba, la derecha, abajo y por último la izquierda. Y así podremos modificar
+cada uno de los lados de nuestro contenedor con mediciones distintas. Normalmente podemos modificar la propiedad de nuestro elemento
+bien si es en línea o bloque, convirtiendo de bloque a línea y de línea a bloque con la propiedad de display... Entonces, si ponemos
+display:block; el elemento al que le ponemos esta propiedad pasara de ser un elemento de tipo en línea a uno de tipo bloque, en caso
+contrario tenemos el display:inline; que nos convierte de tipo bloque a tipo línea. También tenemos el display:inline-block; este es
+para convertir un elemento de tipo bloque a tipo línea. Y lo que pasa es que por lo general muchas cajas o contenedores al ser de tipo
+bloque y pasarlo a tipo línea se quiebra el ancho de su tamaño porque están predestinados a ser únicamente de ese tipo, pero si lo ponemos
+de tipo línea-bloque entonces conserva los atributos que tiene como elemento de tipo bloque pero pocisionado como si fuera un elemento de
+tipo en línea
+
+
+
+aporto a los tipos de bordes 
+dotted - Define un borde punteado.
+dashed - Define un borde discontinuo.
+solid - Define un borde sólido.
+double - Define un doble borde.
+groove- Define un borde ranurado en 3D. El efecto depende del valor del color del borde.
+ridge- Define un borde acanalado en 3D. El efecto depende del valor del color del borde.
+inset- Define un borde de inserción 3D. El efecto depende del valor del color del borde.
+outset- Define un borde de inicio 3D. El efecto depende del valor del color del borde.
+none - No define fronteras
+hidden - Define un borde oculto.
+
+Los fondos: Para que nuestro sitio web tenga una primera vista agradable, obviamente un fondo no está mal para complementar el diseño
+para agregarlos simplemente tenemos que utilizar la propiedad background.. Y bien podemos agregar un color. Ahora en caso de que queramos
+poner una imagen como fondo, tenemos el background:url(./img/imagen.jpg); colocamos la misma propiedad y luego establecemos el valor de 
+url() y dentro de el parentesis agregamos la ruta a la que queremos utilizar nuestra imagen, como cuando estamos diseñando el documento
+es en nuestra hoja de estilos que está alojada dentro de de nuestra carpeta css, tenemos que colocar un punto primero en la ruta.
+Porque esto va a representar un paso hacia atrás o salir de la carpeta actual en la que estamos, por lo que luego establecemos, la
+carpeta donde va nuestra imagen y luego tenemos que podemos poner el nombre del archivo con su extensión. Por lo general nuestra imagen
+utilizada como fondo tiene un tamaño en particular, entonces si es muy pequeña va a tender a repetirse, por lo que no se va a ver nada bien
+así que para eso tenemos la propiedad background-repeat:no-repeat; para que no se repita una y otra vez nuestro fondo constantemente,
+a su vez, tenemos también lo que es la propiedad background-repeat:repeat-x; esta nos sirve para que el fondo se repita varias veces
+pero solo en horizontal, antes se utilizaba esta propiedad para hacer menús de navegación. Ya que como no había degradación de colores
+en CSS pss se utilizaba una imagen con un degradado o una textura y se le aplicaba al menú de esta forma. De igual forma tenemos la propiedad
+de background-repeat:repeat-y; esta nos sirve para que el fondo se repita únicamente de forma vertical, y esto comúmente era utilizado
+a la hora de ponerle un fondo a un div, o caja... De la misma forma que pasaba con los menús de navegación.
+Hay otro tipo de propiedad muy útil para cuando vamos a hacer un fondo y esta es background-attachment con esta podemos hacer que nuestro
+fondo tenga un valor en específico, por ejemplo que tenga un valor fixed u scroll. El fixed nos sirve para que nosotros podamos hacer
+que el fondo se mantenga fijo en un solo lugar y al momento de hacer scroll nos siga por toda la pagina, que todo el contenido se desplegue
+pero que el fondo se mantenga fijo, y en el caso de scroll es para que el fondo se desplace de la misma forma que los demás elementos.
+Igualmente, también podemos alterar la posición en donde va a estar nuestro fondo usando la propiedad de background-position. Por ejemplo
+background-position:50% 0; esto va a hacer que nuestro fondo se desplace un 50% de la proporción de nuestra pantalla, hacia la derecha.
+Pero ojo, esto no quiere decir que esté centrado, ya que no toma el punto medio entre ambos, si no que solo se basa en la derecha.
+y en el caso del 0 nos quiere decir que se va a mantener 0 px hacía arriba y abajo, que en este caso si se le agrega un valor a la unidad
+de medición el fondo simplemente se desplazaría hacia abajo... Los fondos se mueven hacia la derecha y hacia abajo.
+
+Hay otro valor importante para nuestra propiedad background-position esta es la de center, si nosotros ponemos background-position:center;
+entonces nuestro fondo se posicionará al centro de nuestro documento. Si ponemos background-position:center 100px; esto hará que nuestro
+fondo se desplaze 100px hacia abajo, pero dejandolo centrado de derecha a izquierda.
+
+Igualmente, tenemos una propiedad que puede alterar el tamaño de nuestro fondo para que se adapte a nuestra web, y sea mucho más agradable
+para eso tenemos la propiedad background-size:cover; con esto simplemente nos cubre con el fondo todo lo que está como contenedor principal
+de nuestro fondo... O también podemos usar la propiedad background-size:100% 100%; ya que esta es un poco más manejable y menos propensa
+a errores, puesto que, con cover nosotros no tenemos tanto dominio de las proporciones como con las unidades de medición en porcentaje
+
+Posicionamiento: En CSS tenemos algo muy importante y es el pocisionamiento de nuestros elementos a la hora de organizarlos en nuestro sitio
+web, entonces para eso tenemos distintos tipos de propiedades. En concreto tenemos alrededor de 5 tipos. Bien son, position:relative;
+esta propiedad junto a las demás propiedades que sirven para jugar con las coordenadas de el posicionamiento de nuestras cajas
+que bien son top, right, bottom y left nos sirven para poder alterar el espacio de cada uno de nuestros elementos dependiendo de el valor
+que le demos a nuestra unidad de medición. Por ejemplo, en unos 10 contenedores que están uno abajo del otro, si usamos en uno de los
+contenedores la propiedad de position relative podremos hacer que el contenedor se mueva bajo las coordenadas que le demos, y el espacio
+donde estaba nuestro contenedor se va a mantener ahí a pesar de que el contenedor no esté posicionado en ese lugar, lo que quiere decir,
+que las coordenadas siempre van a ser afectadas desde el posicionamiento inicial en donde estaba nuestro contenedor. Igualmente,
+tenemos también otro tipo de posicionamiento, en este caso hablamos del absolute con position:absolute; se supone que pasaríamos
+por encima de cualquier elemento que tengamos en nuestro documento y pondríamos a esa caja en concreto a que se mueva bajo las coordenadas
+que le demos sin importar el lugar o posicionamiento de los demás elementos, normalmente este tipo de posicionamiento no se usa tanto. Porque
+es un poco difícil de usar. Pero, por ejemplo si tenemos una caja que está encerrada en un contenedor padre, y queremos hacer que nuestra
+caja se mueva a gusto por todo nuestro contenedor padre, le ponemos la propiedad de position relative a nuestro contenedor padre
+para que se alínee con los demás elementos, y le ponemos absolute a nuestra caja. Que es la que se va a acomplar al contenedor que la encierra
+lo que quiere decir que cuando juguemos con sus coordenadas será solo dentro de este contenedor padre.
+Tenemos position:static; este simplemente nos hace dejar las cosas de la misma forma en la que la teníamos, si tenemos algún tipo de posicionamiento
+este lo que hace es que nos lo deja por defecto como estaba. position:fixed; este simplemente funciona de la misma forma que el relative
+solo que cuando hagamos scroll el elemento se quedará fijo en la pantalla y nos seguirá por toda la pantalla. Tenemos otro tipo de posicionamiento
+también que suelen ser muy utilizados para más que todos menús de navegación o elementos dentro de él. Estos son los float
+Entonces tenemos float:left; y float:right; el left lo que hace es que posiciona nuestros elementos uno justo al lado del otro.
+pero bien a la izquierda de nuestro documento, poniendo el que primero tengamos más cerca de la izquierda. Y el right tomará solo el que
+tenga justo más cerca a la derecha y los posicionará precisamente hacia la derecha. Tenemos una propiedad que es algo importante a la hora
+de trabajar con float y es la de clear:both; con esta lo que haremos es romper la regla que tenemos, o sea si hay algún tipo de elemento
+que esté siendo afectado por el float y no queremos que se vea afectado precisamente por eso, entonces lo que hacemos es que le aplicamos
+la propiedad de clear:both; y esto lo que hace es limpiar ese efecto que le aplicamos
+
+Textos y tipografías: En CSS tenemos que bien podemos modificar los estilos de nuestros textos y de las fuentes que utilizamos, pare eso
+bien podemos por ejemplo poner la propiedad de color. Esta que ya hemos usado anteriormente, se supone que nos sirve para cambiar el color
+de nuestro texto, siendo la forma de agregar el valor de esta con un código hexadecimal o bien con el valor de rgba para poder cambiar
+las propiedades del color por rgb y ponerle una opacidad color:rgba(0,0,0,.5);
+
+Podemos agregar fuentes a nuestras tipografías, para esto tenemos la propiedad de font-family:Arial, Helvetica, Sans-serif, "Verdana";
+agregandola de esta forma lo que hacemos es que el navegador interprete que si no hay una fuente Arial instalada por defecto, entonces
+que tome una de tipo helvetica, si no hay una helvetica entonces que use sans-serif hasta que utilice la tipografía correcta
+
+Tenemos la propiedad de font-size para cambiar el tamaño de nuestra fuente, para esto podemos simplemente colocar cualquier unidad de medición
+bien sea relativa o absoluta, como los puntos, por porcentaje o bien por px em, si se va a hacer con porcentaje se debe de tener en cuenta
+que el 100% del tamaño de nuestra tipográfía es la que tiene por defecto, es decir, que serían 16px que define el navegador
+font-size:16pt;
+
+Tenemos la propiedad de font-weight que esta nos sirve para modificar el ancho de nuestro texto, por lo general le podemos poner bold como valor
+y pondrá nuestro texto en negritas, a su vez podriamos representarlo bajo otra unidad como 300 500 o demás pixeles, también
+tenemos la posibilidad de agregar un valor como la de normal, que bien este le quita lo deja sin verse en negritas, porque bien hay textos
+que vienen en negritas por defecto. Como los encabezados, y ya con esto no tendrían esa propiedad aplicada
+
+Tenemos la propiedad de text-align esta nos sirve para alinear nuestro texto a alguna parte del documento en específico, por ejemplo
+si tenemos ponemos el valor de right se alinearán a la derecha, si se coloca el de left a la izquierda y el de center hará que se coloque
+al centro. Hay que tener en cuenta que los elementos de tipo bloque son los únicos que se posicionan al centro, si tratamos de aplicar
+alguna de estas propiedades a un elmento de tipo en línea entonces no funcionará. Simplemente no la tomará
+
+Tenemos el line-height que bien es como un interlineado o espacio entre líneas este nos sirve para poder hacer precisamente eso, un espacio
+para que nuestro texto no se vea tan amontonado podemos colocarle la cantidad de pixeles que queramos como valor
+
+También hay una propiedad que se llama text-decoration esta nos sirve para agregarle o quitarle algún tipo de decoración a nuestros textos
+por ejemplo, los enlaces por defecto vienen con el text-decoration con un valor llamado underline, este underline lo que hace es poner un
+subrayado o una línea debajo de nuestro texto, el none lo que hace es desaparece cualquier tipo de decorado que tenga nuestra tipografía
+y es la que normalmente utilizamos para darle estilos a los enlaces, tenemos la propiedad de overline que le coloca una línea por encima
+del texto y el valor de line-trough que simplemente le pone una línea por el medio a nuestro texto o lo tacha
+
+Hay otra propiedad importante para nuestros textos, que bien se llam text-transform esta lo que hace es transformar nuestros textos a algún
+tipo de texto en específico o que le definamos por ejemplo: text-transform:capitalize; esta propiedad lo que hace es que pone cada una
+de las primeras letras de cada una de las palabras de nuestro texto en mayúscula. Modificando el texto por completo y haciendo que nuestro
+trabajo sea mucho más rápido. Tenemos también el valor de lowercase que esta lo que hace es poner todo nuestro texto en minúscula,
+la de uppercase y esta lo que hace es que pone nuestro texto en mayúscula todo
+
+Tenemos también la propiedad de letter-spacing y esta lo que agrega un espaciado por píxeles entre las letras. Sin importar el valor que le pongamos
+
+A su vez, tenemos también la propiedad de word-spacing que este lo que hace es agregar un interlineado entre cada una de nuestras palabras
+independientemente de los pixeles que le agregemos como valor
+
+Igualmente tenemos la propiedad de text-shadow esta lo que hace es que le agrega un sombreado a nuestras letras por lo que 
+text-shadow:5px 5px 5px #000; se le colocan las unidades de medición, la primera corresponde a la unidad de píxeles que utilizan
+de izquierda a derecha, la segunda verticalmente la tercera el tamaño y por último el color del que queremos que sea nuestra sombra
+
+Enlaces: A nuestros enlaces le podemos aplicar cualquier tipo de propiedad que ya hemos visto anteriormente, desde ponerle un color hasta
+cambiarle el tamaño de la fuente, igualmente podemos jugar con los margenes y demás cosas, pero en los enlaces tenemos clases especiales
+que bien se llaman pseudoclases
+
+Pseudoclases: son aquellos en nos permiten darle estilos a nuestras enlaces dependiendo del estado que estos tengan. Tenemos 4 estados
+en el que los enlaces tienen un color, y el que los enlaces que ya visitamos que también tienen otro color. A su vez, tenemos el que 
+al pasar el mouse por encima de un enlace este también cambia sus propiedades, también conocido como hover y tenemos el que funciona
+al darle click a un enlace, también conocido como active. Entonces por lo general tenemos nuestra pseudo clase visited, al que le podemos
+agregar cualquier tipo de propiedad, y así los
+enlaces que hayamos visitado antes
+se verán en el color o tendrán las propiedades
+que le pongamos mientras que también tenemos la pseudo clase link sería a:link{color:#000;} y al agregar esta
+nosotros podemos cambiar las propiedades del enlace que no hemos visitado en el sitio web. Tenemos a:hover{background:#000;}
+que este bien nos permite que cuando pasemos el cursor bien por encima de este elemento o caja, realmente puede aplicarse
+esta pseudoclase a cualquier elemento del documento, y él simplemente cambiará sus propiedades actuales por las otras que están
+en la pseudoclase de hover. También hay una propiedad muy útil que nos sirve para hacer botones y así diferenciar una animación
+de lo que estamos haciendo en el sitio web a través de box-shadow. La propiedad de box-shadow:0px 5px 0px #000; esta nos da una sombra
+para ponerselo al elemento la primera unidad de medida que hay es la de los píxeles en horizontal, luego le sigue los píxeles hacia abajo
+y por último tenemos el tamaño junto con el color de la sombra que queremos tener
+
+Imagenes: a la hora de trabajar con imagenes le podemos aplicar casi cualquier propiedad que ya hemos utilizado antes, sin embargo. Lo que
+más destaca es que tenemos que utilizar más que todo la propiedad de width y de height para poder definir el ancho y alto de nuestra imagen
+anteriormente había un atributo en html que nos ayudaba a eso, pero honestamente es mejor hacerlo desde CSS porque por norma, cualquier
+regla que se esté utilizando en CSS va a ser interpretado primero por el navegador que el mismo HTML lo que quiere decir que si le ponemos
+una medida a nuestro width en CSS y ya teníamos una ya establecida en HTML pss este no lo tomará y tomará primero la medida que está en CSS
+Ahora, lo que tenemos que tener en cuenta también es que, nuestra imagen preferiblemente siempre debería de estar en un div, contenedor
+para así poder darle estilos de una forma mejor y poder manipularla a nuestro gusto. Tenemos que tener en cuenta también que nuestra imagen
+por defecto es un elemento de tipo en línea, por lo que si queremos modificar su posicionamiento o agregarle algún tipo de margen, debemos
+de cambiar su valor primero con la propiedad de display a tipo bloque, entonces si queremos centrar nuestra imagen en el contenedor que 
+creamos pss simplemente ponemos un margin:auto; y también ponemos un ancho a nuestro contenedor, para luego también poner nuestro
+display:block;
+
+Hay algunas propiedades interesantes que le podemos aplicar a nuestra imagen, como por ejemplo la de border-radius:; con esta podemos hacer
+que nuestro elemento sea de tipo radio y se vuelva redondeado, por lo que nos sirve para las típicas imagenes que tenemos en redes sociales
+por ejemplo, o también nos sirve para luego también agregarle un sombreado con box-shadow. A nuestras imagenes también podemos ponerle un
+border, el cual siempre se posicionará alrededor de los bordes de nuestra imagen.
+
+Hay un factor importante a tener en cuenta y es que en HTML normalmente poniendo el atributo width o height siempre podemos unidades de
+medidas estáticas, en cambio en CSS podemos poner medidas relativas como los porcentajes y así hacer que se convierta nuestro sitio más
+responsivo y así adaptarse mejor el diseño a nuestra pantalla
+
+Las listas, las listas tienen algunas propiedades que simplemente pueden hacer que nosotros podamos hacer un aspecto más visible de 
+nuestro sitio web, bien sea con menús de nagegaciones un índice o etc... Tenemos propiedades tanto para las listas desordenadas, como
+para las listas ordenadas para posicionar nuestras listas tenemos la propiedad de list-style-position:inside; list-style-position:outside;
+con esta propiedad y su valor inside simplemente hacemos que se posicione que se vea dentro de nuestro contenedor, y con outside
+que es con el que viene por defecto hará que se vea a parte o fuera de nuestro elemento
+
+A su vez, tenemos también la propiedad de list-style-type:; con esta propiedad podemos tambiar el tipo de estilo que va a tener cada uno
+de nuestros elementos li de nuestra lista, para las listas desordenadas, tenemos disc que es la que viene por defecto con nostros esta
+es representada como un punto negro, tenemos circle este es un círculo sin relleno, y tenemos square que nos pone unos cadrados
+
+Luego para las listas ordenadas tenemos, dentro de esta misma propiedad de list-style-type:; los valores de decimal-leading-zero
+esta lo que hace es que le agrega un 0 a nuestros números que indexan nuestros elementos de la lista, tenemos también el valor de 
+decimal este lo que hace es que pone nuestros elementos de nuestra lista acompañados de un número, así viene por defecto
+Tenemos la de upper-latin esta lo que hace es agregar una letra y ponerla en mayúscula, siendo así la forma de referenciar e identificar
+los elementos de nuestras listas con las letras tenemos lower-latin que esta es lo mismo que la anterior pero en minúsculas. 
+
+Tenemos lower-alpha y upper-alpha que estas son propiedades que son exactamente igual a las anteriores, también tenemos la de 
+list-style:none; con el valor de none lo que hacemos es que le quitamos los estilos a la lista, dejandolos listos para poder ser utilizados
+en por ejemplo un menú de navegación
+
+Para hacer nuestros menús de navegación, hay que tener en cuenta que nuestros elementos li como los a deben de tener la propiedad de 
+display:inline-block; porque estos son representados como elementos de tipo en línea y debemos de utilizarlos como elementos de tipo
+bloque en el caso de los enlaces, y en el caso de los li son de tipo bloque, que debemos convertir a en línea
+
+Tablas: en CSS también podemos jugar con los estilos de las tablas, entonces para esto tenemos que obviamente crear nuestra tabla,
+y agragar nuestras propiedades, para que se vean bien simplemente le ponemos un border a nuestra tabla y a las celdas,
+sin embargo, hay un pequeño problema y es que no se vería de un todo bien así, entonces para eso tenemos una propiedad que se llama
+border-collapse con el valor de collapse y lo que hará es que eliminará todos los espaciados que hayan por nuestros margenes en cada
+una de nuestras celdas, así que de esta forma podríamos hacer que se vean más o menos bien, también podemos cambiarle el valor por el de
+separate y con este simplemente vamos a separar cada uno de los bordes de nuestras celdas y hará que se vea como la separación entre
+las celdas y nuestra tabla
+
+Un dato para los formularios en CSS hay una etiqueta que se llama textarea, en esta podemos agregar texto a un cuadro, y bien
+es normalmente utilizado en lo que son las secciones de comentarios en las que quieres dejar un comentario y eso.
+Entonces, hay propiedades que podemos aplicar a esta etiqueta como para que sea más manejable, por ejemplo la de resize
+su valor bien puede ser vertical, horizontal y both con vertical haremos que el cuadro se desplaze solo de arriba a abajo
+con horizontal haremos que solamente se desplace de derecha a izquierda y con both podremos hacer que nuestro cuadro sea
+maleable como para moverse en cualquier dirección.
+
+También poseemos una pseudoclase llamada focus, con la que podemos hacer que el usuario al darle click a un input. Este se mantega
+activo o realce un color para que se sepa que es ahí donde está el cursos en este momento para llenar los datos, a esta pseudoclase
+bien se le puede agregar la propiedad de color.
+
+Y poseemos una última propiedad que siempre es utilizada en botones y enlaces que bien se llama cursor pointer, y con esta lo que hacemos
+es que simplemente al pasar el cursor sobre nuestro botón se muestre como que podemos clickearle, de lo contrario solamente se vería como
+una caja
+
+Tenemos también una propiedad llamada box-sizing:border-box; que esta nos sirve que cuando tenemos un problema en una caja de que bien
+nuestro diseño se va a romper nos ayuda a acomodarlo
+
+overflow:hidden; esta propiedad nos ayuda a ocultar algún problema originado por los float, o bien para cosas que se nos presenten en el 
+diseño de nuestra web, haciendo así que cualquier estilo que modifique otro elemento, lo limpie. Casi igual que el clear:both;
+
+*/
+
+

@@ -1,0 +1,352 @@
+h1,h2,h3,h4,h5,h6{
+	color: red;
+}
+
+p a{
+	font-size: 30px;
+}
+
+p .yellow{
+	color: red;
+}
+
+a{
+	font-size: 10px;
+}
+
+a[href="https://www.google.com.ve"]{
+	font-size: 30px;
+	color:green;
+}
+
+.contenedorPadre{
+	background: #000;
+	color: #fff;
+	width: 80%;
+	font-size: 40px;
+}
+
+.contenedorHijo{
+	font-size: 20px;
+}
+
+.contenedorPadre .contenedorHijo p .palabraClave{
+	color: red;
+	font-size: 1em;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.contenedorPadre .contenedorHijo2{
+	font-size: 10px;
+}
+
+.contenedorPadre .contenedorHijo2 p .palabraClave2{
+	font-size: 4rem;
+	color: red;
+}
+
+.colores .rgba{
+	color: rgba(53,190,32, .5);
+}
+
+.colores .hexadecimal{
+	color: #35BE20;
+	font-size: 1.5em;
+}
+
+.colores .rgb{
+	font-size: 1.5em;
+	color: rgb(31,187,225);
+}
+
+.colores .porcentual{
+	font-size: 1.5em;
+	color: rgb(90%,0%,20%);
+}
+
+.contenedores h2,a,.caja{
+	background: #ff8000;
+}
+
+.contenedores .caja{
+	width: 300px;
+	height: 180px;
+	border: solid 10px #000;
+	margin: 30px 50px;
+	padding: 20px 50px;
+	display: inline-block;
+}
+
+.fondo .contenedor{
+	background:url(../img/1.jpg);
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	background-position: center 0;
+	background-size: 100% 100%; 
+	color: #fff;
+	height: 600px;
+	width: 80%;
+	padding: 30px 50px;
+}
+
+.posicionamiento div{
+	background: #18B5E7;
+	width: 100px;
+	height: 100px;
+	font-size: 30px;
+}
+
+.posicionamiento div h2{
+	color: #fff;
+}
+
+.floatLeft div{
+	margin-top: 100px;
+	background: #18B5E7;
+	width: 100px;
+	height: 100px;
+	font-size: 30px;
+	float: left;
+}
+
+.floatLeft div h2{
+	color: #fff;
+}
+
+.floatRight div{
+	background: #18B5E7;
+	width: 100px;
+	height: 100px;
+	font-size: 30px;
+	margin-bottom: 300px;
+	float:right;
+}
+
+.floatRight div h2{
+	color: #fff;
+}
+
+.posicionamiento .cajitaRelative{
+	position: relative;
+	top: 300px;
+	right: 0;
+	bottom: 0;
+	left: 200px;
+}
+
+.posicionamiento .padre{
+	background: #000;
+	width: 500px;
+	height: 600px;
+	position: relative;
+}
+
+.posicionamiento .padre .cajitaAbsolute{
+	position: absolute;
+	top: 100px;
+	right: 0;
+	bottom: 0;
+	left: 100px;
+}
+
+.posicionamiento .cajitaFixed{
+	position: fixed;
+	top: 400px;
+	right: 0;
+	bottom: 0;
+	left: 500px;
+	position: static;
+}
+
+.imagenClear img{
+	float: left;
+}
+
+.imagenClear .clear{
+	clear: both;
+}
+
+
+.enlaces a{
+	background: #18B5E7;
+	font-size: 20px;
+	text-decoration: none;
+	padding: 10px 20px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	display: inline-block;
+	box-shadow: 0px 5px 0px #3B91E1;
+}
+
+.enlaces a:link{
+	color: #E71828;
+}
+
+.enlaces a:hover{
+	text-decoration: underline;
+	background: #ccc;
+	color: #fff;
+	box-shadow: 0px 2px 0px #3B91E1;
+}
+
+.enlaces a:active{
+	background: #ff8000;
+	box-shadow: none;
+}
+
+.enlaces a:visited{
+	color: #000;
+}
+
+.imagen{
+	width: 80%;
+	background: #ff8000;
+}
+
+.imagen img{
+	height: auto;
+	margin: auto;
+	display: block;
+	padding:30px 20px;
+	border-radius: 50%;
+	box-shadow: 5px 5px 0px #ccc;
+}
+
+.foto{
+	padding: 20px;
+}
+
+.foto img{
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.menu{
+	width: 100%;
+	background: #000;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.menu li{
+	display: inline-block;
+}
+
+.menu li a{
+	background: none;
+	font-size: 16px;
+	padding: 10px 20px;
+	display: inline-block;
+	color: #fff;
+}
+
+.menu li a:hover{
+	background: #ccc;
+	color: #000;
+}
+
+.listas ul{
+	list-style-position: inside;
+	list-style-type: disc;
+}
+
+.listas ul > ul{
+	list-style-type: circle;
+}
+
+.listas ul > ul > ul{
+	list-style-type: square;
+}
+
+.listas ol{
+	list-style-position: outside;
+	list-style-type: decimal-leading-zero;
+}
+
+.listas ol > ol{
+	list-style-type: decimal;
+}
+
+.listas ol > ol > ol{
+	list-style-type: upper-latin;
+}
+
+.listas ol > ol > ol > ol{
+	list-style-type: lower-latin;
+}
+
+.listas ol > ol > ol > ol > ol{
+	list-style-type: lower-alpha;
+}
+
+.listas ol > ol > ol > ol > ol > ol{
+	list-style-type: upper-alpha;
+}
+
+.zelda table{
+	border: 1px solid #000;
+	border-collapse: collapse;
+	width: 500px;
+}
+
+.zelda table td{
+	border: 1px solid #000;
+	padding: 20px;
+}
+
+.zelda table tr:hover{
+	background: #ccc;
+	cursor: pointer;
+}
+
+.zelda table td:hover{
+	background: #000;
+	color: #fff;
+}
+
+.formulario form{
+	width: 25%;
+	padding: 20px;
+	margin: 20px;
+	border: 1px solid #000;
+}
+
+.formulario label{
+	font-size: 12px;
+	display: block;
+	width: 100%;
+}
+
+.formulario input, textarea{
+	margin-bottom: 20px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+}
+
+.formulario textarea{
+	resize: vertical;
+	max-height: 300px;
+	min-height: 100px;
+}
+
+.formulario input:focus, textarea:focus{
+	border: 1px solid #1C89A2;
+	outline: none;
+}
+
+.formulario input[type="submit"]{
+	border: none;
+	margin-bottom: 0;
+	background: #1C89A2;
+	color: #fff;
+}
+
+.formulario input[type="submit"]:hover{
+	background: #21A7C6;
+	cursor: pointer;
+}
